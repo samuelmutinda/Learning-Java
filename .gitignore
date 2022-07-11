@@ -1,4 +1,6 @@
 #Ignore out directory
-.out
+out
 #ignore iml file
 learning-java.iml
+#ignore .idea
+.idea
