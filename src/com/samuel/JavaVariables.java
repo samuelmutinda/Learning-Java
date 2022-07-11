@@ -1,5 +1,4 @@
 package com.samuel;
-import java.util.Date;
 
 public class JavaVariables {
     public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class JavaVariables {
         //      2. Reference types/objects.
         //=>Let us create some variables
 
-        //PRIMITIVE TYPES:
+                                //PRIMITIVE TYPES:
         //A variable called "a" holding an 8-bit number (-128 to 127)
         byte a = 5;
         //A variable called "b" holding a 16-bit number (-32,768 to 32,767)
@@ -47,8 +46,42 @@ public class JavaVariables {
         System.out.println("The value of a is now "+ a +" and that of " +
                 "copyExperiment is " + copyExperiment);
 
-        //REFERENCE TYPES:
-        //A reference type of name "currentDate"
-        Date currentDate = new Date();
+                                //REFERENCE TYPES:
+        //=> Reference types always start with capitals
+        //=> A reference called myString of the String reference type (type)
+        String myString = new String("This is my string");
+
+        //=> Reference types have different behaviors and attributes
+        //=> For example, in the String reference type, we have a length()
+        //   attribute that gives us the length of the string.
+        System.out.println("The length of myString is " + myString.length());
+
+        //=> String is a built-in ref type.
+        //=> We can however build our own ref types.
+        //=> The person ref type is defined outside the main method
+        //=> Let us create a reference type called sam of the Person type
+        Person sam = new Person("sam");
+        //=> We access the personName attribute of sam using sam.personName
+        System.out.println("The name of the Person sam is "+sam.personName);
+
+        //=> Let us create a new Person called alex and point him to the attributes
+        //   of sam. Alex will always refer to the attributes of sam.
+        //=> This means that if any attribute of sam is changed, the changes are
+        //   to alex.
+        Person alex = sam;
+        System.out.println("Before sam is changed, sam's name is \""+sam.personName
+                            +"\" and that of alex is \""+alex.personName+"\"");
+        sam.personName = "New name";
+        System.out.println("After sam is changed, sam's name is \""+sam.personName
+                +"\" and that of alex is \""+alex.personName+"\"");
+        //=> Similarly, changes on alex are reflected on sam
+    }
+
+    //PERSON REFERENCE TYPE
+    static class Person {
+        String personName;
+        Person(String personName){
+            this.personName = personName;
+        }
     }
 }
