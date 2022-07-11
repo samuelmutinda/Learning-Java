@@ -14,6 +14,7 @@ public class JavaVariables {
         //=>Let us create some variables
 
                                 //PRIMITIVE TYPES:
+        System.out.println("*********Creating Primitive types*********");
         //A variable called "a" holding an 8-bit number (-128 to 127)
         byte a = 5;
         //A variable called "b" holding a 16-bit number (-32,768 to 32,767)
@@ -32,11 +33,12 @@ public class JavaVariables {
         System.out.println("The value in b is => "+b);
         System.out.println("The value in c is => "+c);
         System.out.println("The value in d is => "+d);
-        System.out.println("The value in name is => "+name);
+        System.out.println("The value in name is => "+name+"\n\n");
 
         //=> When we give a variable the value of another variable
         //   the value is copied to the other variable. Any changes to the
         //   original variable after copying do not affect the new variable
+        System.out.println("*********Copying Primitive types*********");
         int copyExperiment = a;
         System.out.println("Before:");
         System.out.println("The value of a is "+ a +" and that of " +
@@ -44,9 +46,10 @@ public class JavaVariables {
         a = 10;
         System.out.println("Changes made to a");
         System.out.println("The value of a is now "+ a +" and that of " +
-                "copyExperiment is " + copyExperiment);
+                "copyExperiment is " + copyExperiment+"\n\n");
 
                                 //REFERENCE TYPES:
+        System.out.println("*********Creating Reference types*********");
         //=> Reference types always start with capitals
         //=> A reference called myString of the String reference type (type)
         String myString = new String("This is my string");
@@ -62,8 +65,9 @@ public class JavaVariables {
         //=> Let us create a reference type called sam of the Person type
         Person sam = new Person("sam");
         //=> We access the personName attribute of sam using sam.personName
-        System.out.println("The name of the Person sam is "+sam.personName);
+        System.out.println("The name of the Person sam is "+sam.personName+"\n\n");
 
+        System.out.println("*********Copying Reference types*********");
         //=> Let us create a new Person called alex and point him to the attributes
         //   of sam. Alex will always refer to the attributes of sam.
         //=> This means that if any attribute of sam is changed, the changes are
