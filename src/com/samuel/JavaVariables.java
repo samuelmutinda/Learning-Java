@@ -35,6 +35,18 @@ public class JavaVariables {
         System.out.println("The value in d is => "+d);
         System.out.println("The value in name is => "+name);
 
+        //=> When we give a variable the value of another variable
+        //   the value is copied to the other variable. Any changes to the
+        //   original variable after copying do not affect the new variable
+        int copyExperiment = a;
+        System.out.println("Before:");
+        System.out.println("The value of a is "+ a +" and that of " +
+                "copyExperiment is " + copyExperiment);
+        a = 10;
+        System.out.println("Changes made to a");
+        System.out.println("The value of a is now "+ a +" and that of " +
+                "copyExperiment is " + copyExperiment);
+
         //REFERENCE TYPES:
         //A reference type of name "currentDate"
         Date currentDate = new Date();
