@@ -36,10 +36,30 @@ public class ClassesInJava {
                 "Canon",
                 "30mm",
                 false);
+
+                            //PRINTING OBJECT ATTRIBUTES
+        System.out.println("Lens 1:");
+        System.out.println(lensOne.brand);
+        System.out.println(lensOne.focalLength);
+        System.out.println("Prime: "+lensOne.isPrime+"\n");
+
+        System.out.println("Lens 2:");
+        System.out.println(lensTwo.brand);
+        System.out.println(lensTwo.focalLength);
+        System.out.println("Prime: "+lensTwo.isPrime+"\n");
+
+        System.out.println("Lens 3:");
+        System.out.println(lensThree.brand);
+        System.out.println(lensThree.focalLength);
+        System.out.println("Prime: "+lensThree.isPrime);
     }
     static class Lens{
         String brand;
         String focalLength;
+        String model;
+        String color;
+        double price;
+        double weight;
         boolean isPrime;
         //=> The constructor is a special function with the name of the class
         //=> The purpose of the constructor is to initialize objects.
