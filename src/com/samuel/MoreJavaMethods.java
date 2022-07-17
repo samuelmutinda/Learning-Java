@@ -19,11 +19,11 @@ public class MoreJavaMethods {
     //=> Int specifies the return type of the method.
     //=> This method will accept an array of characters and
     //   the character we need to find count of
-    public static int countOccurrences(char[] letters, char letter){
+    public static int countOccurrences(char[] letters, char searchLetter){
         int count = 0;
         int letterCount = 0;
         for (int i = 0; i < letters.length; i++) {
-            if (letters[i] == letter){
+            if (letters[i] == searchLetter){
                 letterCount++;
             }
         }
